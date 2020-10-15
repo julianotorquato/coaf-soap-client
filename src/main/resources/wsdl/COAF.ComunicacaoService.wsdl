@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="ComunicacaoService" targetNamespace="http://www.coaf.fazenda.gov.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.coaf.fazenda.gov.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+        <xs:schema elementFormDefault="qualified" targetNamespace="http://www.coaf.fazenda.gov.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.coaf.fazenda.gov.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xs:element name="CancelarLoteComunicacao" type="tns:CancelarLoteComunicacao"/>
+            <xs:element name="CancelarLoteComunicacaoResponse" type="tns:CancelarLoteComunicacaoResponse"/>
+            <xs:element name="EnviarLoteComunicacao" type="tns:EnviarLoteComunicacao"/>
+            <xs:element name="EnviarLoteComunicacaoResponse" type="tns:EnviarLoteComunicacaoResponse"/>
+            <xs:element name="ReciboLoteComunicacao" type="tns:ReciboLoteComunicacao"/>
+            <xs:element name="ReciboLoteComunicacaoResponse" type="tns:ReciboLoteComunicacaoResponse"/>
+            <xs:element name="RetificarLoteComunicacao" type="tns:RetificarLoteComunicacao"/>
+            <xs:element name="RetificarLoteComunicacaoResponse" type="tns:RetificarLoteComunicacaoResponse"/>
+            <xs:complexType name="CancelarLoteComunicacao">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="lote" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="CancelarLoteComunicacaoResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="EnviarLoteComunicacao">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="lote" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="EnviarLoteComunicacaoResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="RetificarLoteComunicacao">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="lote" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="RetificarLoteComunicacaoResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ReciboLoteComunicacao">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="lote" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ReciboLoteComunicacaoResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="EnviarLoteComunicacao">
+        <wsdl:part element="tns:EnviarLoteComunicacao" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="RetificarLoteComunicacao">
+        <wsdl:part element="tns:RetificarLoteComunicacao" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="EnviarLoteComunicacaoResponse">
+        <wsdl:part element="tns:EnviarLoteComunicacaoResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CancelarLoteComunicacao">
+        <wsdl:part element="tns:CancelarLoteComunicacao" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="CancelarLoteComunicacaoResponse">
+        <wsdl:part element="tns:CancelarLoteComunicacaoResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ReciboLoteComunicacaoResponse">
+        <wsdl:part element="tns:ReciboLoteComunicacaoResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ReciboLoteComunicacao">
+        <wsdl:part element="tns:ReciboLoteComunicacao" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="RetificarLoteComunicacaoResponse">
+        <wsdl:part element="tns:RetificarLoteComunicacaoResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="ComunicacaoService">
+        <wsdl:operation name="CancelarLoteComunicacao">
+            <wsdl:input message="tns:CancelarLoteComunicacao" name="CancelarLoteComunicacao">
+            </wsdl:input>
+            <wsdl:output message="tns:CancelarLoteComunicacaoResponse" name="CancelarLoteComunicacaoResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="EnviarLoteComunicacao">
+            <wsdl:input message="tns:EnviarLoteComunicacao" name="EnviarLoteComunicacao">
+            </wsdl:input>
+            <wsdl:output message="tns:EnviarLoteComunicacaoResponse" name="EnviarLoteComunicacaoResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RetificarLoteComunicacao">
+            <wsdl:input message="tns:RetificarLoteComunicacao" name="RetificarLoteComunicacao">
+            </wsdl:input>
+            <wsdl:output message="tns:RetificarLoteComunicacaoResponse" name="RetificarLoteComunicacaoResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ReciboLoteComunicacao">
+            <wsdl:input message="tns:ReciboLoteComunicacao" name="ReciboLoteComunicacao">
+            </wsdl:input>
+            <wsdl:output message="tns:ReciboLoteComunicacaoResponse" name="ReciboLoteComunicacaoResponse">
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ComunicacaoServiceSoapBinding" type="tns:ComunicacaoService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CancelarLoteComunicacao">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="CancelarLoteComunicacao">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CancelarLoteComunicacaoResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="EnviarLoteComunicacao">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="EnviarLoteComunicacao">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="EnviarLoteComunicacaoResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RetificarLoteComunicacao">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="RetificarLoteComunicacao">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="RetificarLoteComunicacaoResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ReciboLoteComunicacao">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="ReciboLoteComunicacao">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="ReciboLoteComunicacaoResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ComunicacaoService">
+        <wsdl:port binding="tns:ComunicacaoServiceSoapBinding" name="ComunicacaoServicePort">
+            <soap:address location="https://siscoaf.fazenda.gov.br/siscoaf-internet/ComunicacaoService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
