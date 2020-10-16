@@ -1,0 +1,16 @@
+
+spring:
+  profiles:
+    active: dev
+
+server:
+  port: 7029
+
+# ===================================================================
+# Application specific properties
+# ===================================================================
+
+application:
+  password-pfx: 1234
+  coaf:
+    url: https://treina.siscoaf2.fazenda.gov.br

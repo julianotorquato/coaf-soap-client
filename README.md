@@ -72,19 +72,22 @@ Remoção dos .class
 
 ## 🔥 Instalação e execução
 
-Faça o clone desse repositório e entre na pasta
+1. Faça o clone desse repositório e entre na pasta
 
 ```
 cd coaf-soap-client
 ```
 
-Instalar as dependências
+2. Instalar as dependências
 
 ```
 mvn install -DskipTests
 ```
 
-Para conhecer a solução técnica. Basta executar a classe main "Test_Soap".
+3. Após subir a aplicação, acesse as API's disponiveis:
+
+* [EnviarLoteComunicacao](http://localhost:7029/api/coaf/send-communication)
+* [ReciboLoteComunicacao](http://localhost:7029/api/coaf/receipt)
 
 
 ---

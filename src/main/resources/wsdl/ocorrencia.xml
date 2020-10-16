@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LOTE>
-    <OCORRENCIAS ID="SISCOAF15102020">
+    <OCORRENCIAS ID="SISCOAF16102020">
         <OCORRENCIA>
             <AgMun>Goiânia</AgMun>
             <NumOcorrencia>3</NumOcorrencia>
-            <DtFim>14/10/2020</DtFim>
-            <DtInicio>01/01/2020</DtInicio>
-            <VlCred>201</VlCred>
+            <DtFim>15/10/2019</DtFim>
+            <DtInicio>01/01/2019</DtInicio>
+            <VlCred>101</VlCred>
             <Det>TESTE VHL via API novo modelo</Det>
             <AgUF>GO</AgUF>
             <CPFCNPJCom>20832801000120</CPFCNPJCom>
