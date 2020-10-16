@@ -84,7 +84,13 @@ cd coaf-soap-client
 mvn install -DskipTests
 ```
 
-3. Após subir a aplicação, acesse as API's disponiveis:
+3. Executar aplicação
+
+```
+./mvnw spring-boot:run
+```
+
+4. Após subir a aplicação, acesse as API's disponiveis:
 
 * [EnviarLoteComunicacao](http://localhost:7029/api/coaf/send-communication)
 * [ReciboLoteComunicacao](http://localhost:7029/api/coaf/receipt)
