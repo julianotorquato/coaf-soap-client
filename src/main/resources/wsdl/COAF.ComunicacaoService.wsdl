@@ -1,7 +1,6 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<wsdl:definitions name="ComunicacaoService" targetNamespace="http://www.coaf.fazenda.gov.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.coaf.fazenda.gov.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="ComunicacaoService" targetNamespace="http://www.gov.br/coaf/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.gov.br/coaf/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <wsdl:types>
-        <xs:schema elementFormDefault="qualified" targetNamespace="http://www.coaf.fazenda.gov.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.coaf.fazenda.gov.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <xs:schema elementFormDefault="qualified" targetNamespace="http://www.gov.br/coaf/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.gov.br/coaf/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             <xs:element name="CancelarLoteComunicacao" type="tns:CancelarLoteComunicacao"/>
             <xs:element name="CancelarLoteComunicacaoResponse" type="tns:CancelarLoteComunicacaoResponse"/>
             <xs:element name="EnviarLoteComunicacao" type="tns:EnviarLoteComunicacao"/>
@@ -10,6 +9,10 @@
             <xs:element name="ReciboLoteComunicacaoResponse" type="tns:ReciboLoteComunicacaoResponse"/>
             <xs:element name="RetificarLoteComunicacao" type="tns:RetificarLoteComunicacao"/>
             <xs:element name="RetificarLoteComunicacaoResponse" type="tns:RetificarLoteComunicacaoResponse"/>
+            <xs:element name="SolicitaProtocoloComunicacao" type="tns:SolicitaProtocoloComunicacao"/>
+            <xs:element name="SolicitaProtocoloComunicacaoResponse" type="tns:SolicitaProtocoloComunicacaoResponse"/>
+            <xs:element name="SolicitaReciboEnvio" type="tns:SolicitaReciboEnvio"/>
+            <xs:element name="SolicitaReciboEnvioResponse" type="tns:SolicitaReciboEnvioResponse"/>
             <xs:complexType name="CancelarLoteComunicacao">
                 <xs:sequence>
                     <xs:element minOccurs="0" name="lote" type="xs:string"/>
@@ -50,14 +53,50 @@
                     <xs:element minOccurs="0" name="return" type="xs:string"/>
                 </xs:sequence>
             </xs:complexType>
+            <xs:complexType name="SolicitaProtocoloComunicacao">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="protocolo" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SolicitaProtocoloComunicacaoResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SolicitaReciboEnvio">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="lote" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SolicitaReciboEnvioResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
         </xs:schema>
     </wsdl:types>
+    <wsdl:message name="SolicitaReciboEnvioResponse">
+        <wsdl:part element="tns:SolicitaReciboEnvioResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="RetificarLoteComunicacaoResponse">
+        <wsdl:part element="tns:RetificarLoteComunicacaoResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="ReciboLoteComunicacao">
+        <wsdl:part element="tns:ReciboLoteComunicacao" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
     <wsdl:message name="EnviarLoteComunicacao">
         <wsdl:part element="tns:EnviarLoteComunicacao" name="parameters">
         </wsdl:part>
     </wsdl:message>
     <wsdl:message name="RetificarLoteComunicacao">
         <wsdl:part element="tns:RetificarLoteComunicacao" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="SolicitaProtocoloComunicacao">
+        <wsdl:part element="tns:SolicitaProtocoloComunicacao" name="parameters">
         </wsdl:part>
     </wsdl:message>
     <wsdl:message name="EnviarLoteComunicacaoResponse">
@@ -72,16 +111,16 @@
         <wsdl:part element="tns:CancelarLoteComunicacaoResponse" name="parameters">
         </wsdl:part>
     </wsdl:message>
+    <wsdl:message name="SolicitaReciboEnvio">
+        <wsdl:part element="tns:SolicitaReciboEnvio" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="SolicitaProtocoloComunicacaoResponse">
+        <wsdl:part element="tns:SolicitaProtocoloComunicacaoResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
     <wsdl:message name="ReciboLoteComunicacaoResponse">
         <wsdl:part element="tns:ReciboLoteComunicacaoResponse" name="parameters">
-        </wsdl:part>
-    </wsdl:message>
-    <wsdl:message name="ReciboLoteComunicacao">
-        <wsdl:part element="tns:ReciboLoteComunicacao" name="parameters">
-        </wsdl:part>
-    </wsdl:message>
-    <wsdl:message name="RetificarLoteComunicacaoResponse">
-        <wsdl:part element="tns:RetificarLoteComunicacaoResponse" name="parameters">
         </wsdl:part>
     </wsdl:message>
     <wsdl:portType name="ComunicacaoService">
@@ -107,6 +146,18 @@
             <wsdl:input message="tns:ReciboLoteComunicacao" name="ReciboLoteComunicacao">
             </wsdl:input>
             <wsdl:output message="tns:ReciboLoteComunicacaoResponse" name="ReciboLoteComunicacaoResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SolicitaProtocoloComunicacao">
+            <wsdl:input message="tns:SolicitaProtocoloComunicacao" name="SolicitaProtocoloComunicacao">
+            </wsdl:input>
+            <wsdl:output message="tns:SolicitaProtocoloComunicacaoResponse" name="SolicitaProtocoloComunicacaoResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SolicitaReciboEnvio">
+            <wsdl:input message="tns:SolicitaReciboEnvio" name="SolicitaReciboEnvio">
+            </wsdl:input>
+            <wsdl:output message="tns:SolicitaReciboEnvioResponse" name="SolicitaReciboEnvioResponse">
             </wsdl:output>
         </wsdl:operation>
     </wsdl:portType>
@@ -148,10 +199,28 @@
                 <soap:body use="literal"/>
             </wsdl:output>
         </wsdl:operation>
+        <wsdl:operation name="SolicitaProtocoloComunicacao">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="SolicitaProtocoloComunicacao">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="SolicitaProtocoloComunicacaoResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SolicitaReciboEnvio">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="SolicitaReciboEnvio">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="SolicitaReciboEnvioResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
     </wsdl:binding>
     <wsdl:service name="ComunicacaoService">
         <wsdl:port binding="tns:ComunicacaoServiceSoapBinding" name="ComunicacaoServicePort">
-            <soap:address location="https://siscoaf.fazenda.gov.br/siscoaf-internet/ComunicacaoService"/>
+            <soap:address location="https://treina.siscoaf.coaf.gov.br/siscoaf-internet/ComunicacaoService"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
