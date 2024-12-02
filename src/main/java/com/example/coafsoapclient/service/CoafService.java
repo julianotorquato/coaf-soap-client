@@ -1,13 +1,19 @@
 package com.example.coafsoapclient.service;
 
-import br.gov.fazenda.coaf.ComunicacaoService_Service;
+import br.gov.coaf.ComunicacaoService_Service;
 import com.example.coafsoapclient.config.ApplicationProperties;
 import com.example.coafsoapclient.service.util.FileSystemUtils;
+import com.example.coafsoapclient.service.util.SSLUtilities;
 import com.example.coafsoapclient.service.util.XMLUtils;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CoafService {
+
+    static {
+        SSLUtilities.trustAllHostnames();
+        SSLUtilities.trustAllHttpsCertificates();
+    }
 
     private final ApplicationProperties applicationProperties;
     private final SignatureXMLA3Service signatureXMLA3Service;
