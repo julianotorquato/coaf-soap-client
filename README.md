@@ -104,8 +104,9 @@ mvn install -DskipTests
 
 - [Gerar PFX Demo](https://demos.lacunasoftware.com/en/demos/generate-certificate) - Link usado para gerar o .pfx no teste de assinatura digital.
 - [Gerar chave de Desenvolvedor](https://pki.rest/app/#/getting-started) - Caso necessite conhecer os recursos da Lacuna Software para assinatura clique [aqui](https://github.com/LacunaSoftware/SignerSamples).
-- [COAF](http://fazenda.gov.br/orgaos/coaf) - Para acessar ambiente de [Homologação](https://treina.siscoaf2.fazenda.gov.br/) e/ou [Produção](https://siscoaf.fazenda.gov.br).
-- [Skipar Validação SSL](https://stackoverflow.com/questions/12473576/how-to-disable-certificate-validation-in-jax-ws-client/24586928) Link usado para desabilitar validação ssl client SOAP. 
+- [COAF](http://fazenda.gov.br/orgaos/coaf) - Para acessar ambiente de [Homologação](https://treina.siscoaf.coaf.gov.br/) e/ou [Produção](https://siscoaf.coaf.gov.br).
+- [Skipar Validação SSL](https://stackoverflow.com/questions/12473576/how-to-disable-certificate-validation-in-jax-ws-client/24586928) Link usado para desabilitar validação ssl client SOAP.
+- [Baixar os stub's e wsdl do coaf](https://github.com/julianotorquato/coaf-soap-client/blob/main/src/main/java/com/example/coafsoapclient/service/wsdl/Download_Stubs.java). 
 
 ---
 
